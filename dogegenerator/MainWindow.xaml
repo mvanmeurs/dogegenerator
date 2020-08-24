@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:dogegenerator"
         mc:Ignorable="d"
-        Title="Doge Generator" Height="450" Width="800">
+        Title="Doge Generator" Height="1080" Width="1320" Background="DeepSkyBlue">
     <Grid>
-        <TextBlock Text="The Bestest Doge" FontSize="36" VerticalAlignment="Center" HorizontalAlignment="Center" />
+        <StackPanel Margin="10">
+            <TextBlock Text="The Bestest Doge" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Foreground="White"/>
+            <ComboBox Text="Image Dropdown" Width="250" Margin="0, 0, 0, 25" />
+            <Canvas Height="890" Name="canvas" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1220" Background="Black" ClipToBounds="True" />
+        </StackPanel>
     </Grid>
 </Window>

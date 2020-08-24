@@ -104,6 +104,15 @@
   <ItemGroup>
     <Resource Include="charles.ico" />
   </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Img\CouchPotatoe.jpg" />
+    <Resource Include="Img\SnoozingDoggo.jpg" />
+    <Resource Include="Img\LazyWoofer.jpg" />
+    <Resource Include="Img\BlanketPuppers.jpg" />
+    <Resource Include="Img\WinterDoggo.jpg" />
+    <Resource Include="Img\SnowyDoge.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
