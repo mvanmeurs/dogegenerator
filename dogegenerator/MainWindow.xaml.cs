@@ -21,16 +21,37 @@ namespace dogegenerator
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ImageBrush brush;
         public MainWindow()
         {
             InitializeComponent();
 
-            Debug.WriteLine("yeet");
-
-            ImageBrush brush = new ImageBrush();
-            BitmapImage image = new BitmapImage(new Uri("../../Img/BlanketPuppers.jpg", UriKind.Relative));
-            brush.ImageSource = image;
+            brush = new ImageBrush
+            {
+                Opacity = 0
+            };
             canvas.Background = brush;
+
+            CreateComboBox();
+
+            dropdown.SelectionChanged += dropdown_SelectionChanged;
+
+        }
+
+        private void CreateComboBox()
+        {
+            dropdown.Items.Add("BlanketPuppers");
+            dropdown.Items.Add("CouchPotatoe");
+            dropdown.Items.Add("LazyWoofer");
+            dropdown.Items.Add("SnoozingDoggo");
+            dropdown.Items.Add("SnowyDoge");
+            dropdown.Items.Add("WinterDoggo");
+        }
+
+        private void dropdown_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            brush.ImageSource = new BitmapImage(new Uri("../../Img/" + dropdown.SelectedValue.ToString() + ".jpg", UriKind.Relative));
+            brush.Opacity = 100;
         }
     }
 }

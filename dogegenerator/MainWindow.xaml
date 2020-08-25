@@ -9,7 +9,7 @@
     <Grid>
         <StackPanel Margin="10">
             <TextBlock Text="The Bestest Doge" FontSize="36" VerticalAlignment="Top" HorizontalAlignment="Center" Margin="5" Foreground="White"/>
-            <ComboBox Text="Image Dropdown" Width="250" Margin="0, 0, 0, 25" />
+            <ComboBox Name="dropdown" Width="250" Margin="0, 0, 0, 25" SelectionChanged="dropdown_SelectionChanged"/>
             <Canvas Height="890" Name="canvas" VerticalAlignment="Top" HorizontalAlignment="Center" Width="1220" Background="Black" ClipToBounds="True" />
         </StackPanel>
     </Grid>
